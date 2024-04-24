@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "parcel ./src/*.html",
-    "build": "parcel build ./src/*.html --public-url /Andriy-Kond/simpleBox-videoPlayer-feedbackForm/ --no-minify"
+    "build": "parcel build ./src/*.html --public-url /Andriy-Kond/simpleBox-videoPlayer-feedbackForm/"
   },
   "author": "",
   "license": "ISC",
