@@ -104,7 +104,9 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+src
+package-lock.json
+package.json
 
 # Gatsby files
 .cache/
