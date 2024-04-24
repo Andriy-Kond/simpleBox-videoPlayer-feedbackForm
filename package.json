@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /Andriy-Kond/simpleBox-videoPlayer-feedbackForm/ --no-minify"
+    "start": "parcel ./src/*.html",
+    "build": "parcel build ./src/*.html --public-url /Andriy-Kond/simpleBox-videoPlayer-feedbackForm/ --no-minify"
   },
   "author": "",
   "license": "ISC",
