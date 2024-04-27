@@ -1,14 +1,15 @@
 import Player from "@vimeo/player";
+const throttle = require("lodash.throttle");
 
 const iframe = document.querySelector("#vimeo-player");
 const player = new Player(iframe);
 
 const stringifiedTime = localStorage.getItem("pausedTime");
 if (stringifiedTime) {
-  setCurrentTimePlayer(JSON.parse(stringifiedTime));
+  getCurrentTimePlayer(JSON.parse(stringifiedTime));
 }
 
-function setCurrentTimePlayer(seconds) {
+function getCurrentTimePlayer(seconds) {
   player
     .setCurrentTime(seconds)
     .then(function (seconds) {
@@ -27,16 +28,8 @@ function setCurrentTimePlayer(seconds) {
     });
 }
 
-player.on("play", function () {
-  console.log("played the video!");
-  getCurrentTimePlayer();
-});
-
-// player.getVideoTitle().then(function (title) {
-//   console.log("title:", title);
-// });
-
-function getCurrentTimePlayer() {
+function setCurrentTimePlayer() {
+  console.log("time updated ");
   player
     .getCurrentTime()
     .then(function (seconds) {
@@ -48,3 +41,18 @@ function getCurrentTimePlayer() {
       // an error occurred
     });
 }
+
+// ^ Варіант з відстежуванням поточної позиції за допомогою події play (коли ставиться пауза. при перезавантаженні буде остання позиція паузи)
+// player.on("play", function () {
+//   console.log("played the video!");
+//   setCurrentTimePlayer();
+// });
+
+// ^ Варіант з відстежуванням поточної позиції за допомогою події timeupdate
+player.on(
+  "timeupdate",
+  throttle(() => {
+    console.log("played the video!");
+    setCurrentTimePlayer();
+  }, 1000),
+);
