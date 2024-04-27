@@ -1,6 +1,11 @@
 # Проект зібраний за допомогою parcel-project-template
 
 (https://github.com/goitacademy/parcel-project-template)
+UPD: збірка вже працює не коректно:
+
+- не розставляє шляхи в HTML-файлах
+- не розпізнає знає про handlebars
+- не переробляє відносні шляхи при import/export бібліотек
 
 # Стартові файли:
 
@@ -17,7 +22,7 @@ import SimpleLightbox from "simplelightbox";
 // Додатковий імпорт стилів:
 import "simplelightbox/dist/simple-lightbox.min.css";
 
-### Task 2 - відеоплеєр
+## Task 2 - відеоплеєр
 
 HTML містить < iframe > з відео для Vimeo плеєра.
 Напиши скрипт, який буде зберігати поточний час відтворення відео у локальне сховище і, після перезавантаження сторінки, продовжувати відтворювати відео з цього часу.
