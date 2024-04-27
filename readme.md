@@ -1,12 +1,16 @@
-# Проект зібраний за допомогою parcel-project-template (https://github.com/goitacademy/parcel-project-template)
+# Проект зібраний за допомогою parcel-project-template
 
-# Стартові файли: https://minhaskamal.github.io/DownGit/#/home?url=https:%2F%2Fgithub.com%2Fgoitacademy%2Fjavascript-homework%2Ftree%2Fmain%2Fv2%2F08%2Fsrc
+(https://github.com/goitacademy/parcel-project-template)
+
+# Стартові файли:
+
+https://minhaskamal.github.io/DownGit/#/home?url=https:%2F%2Fgithub.com%2Fgoitacademy%2Fjavascript-homework%2Ftree%2Fmain%2Fv2%2F08%2Fsrc
 
 ## Task 1 - бібліотека SimpleLightbox
 
 Додай бібліотеку SimpleLightbox як залежність проекту, використовуючи npm.
 
-### Для того щоб підключити CSS код бібліотеки в проект, необхідно додати ще один імпорт, крім того, що описаний в документації.
+#### Для того щоб підключити CSS код бібліотеки в проект, необхідно додати ще один імпорт, крім того, що описаний в документації.
 
 // Описаний в документації:
 import SimpleLightbox from "simplelightbox";
@@ -36,7 +40,7 @@ HTML містить < iframe > з відео для Vimeo плеєра.
 Під час перезавантаження сторінки скористайся методом setCurrentTime() з метою відновлення відтворення зі збереженої позиції.
 Додай до проекту бібліотеку lodash.throttle і зроби так, щоб час відтворення оновлювався у сховищі не частіше, ніж раз на секунду.
 
-## Завдання 3 - форма зворотного зв'язку
+## Task 3 - форма зворотного зв'язку
 
 HTML містить розмітку форми. Напиши скрипт, який буде зберігати значення полів у локальне сховище, коли користувач щось друкує.
 
