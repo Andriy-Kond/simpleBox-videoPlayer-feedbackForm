@@ -29,8 +29,9 @@ function readLocalStorageFields() {
   }
 }
 
-function submitForm() {
+function submitForm(e) {
   e.preventDefault();
+  formRef.reset();
   formFieldsObj = {};
   localStorage.removeItem("formFields");
 }
